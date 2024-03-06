@@ -104,6 +104,11 @@
   font-size: 30px;
   padding: 10px 0;
 }
+@media (max-width: 500px) {
+  .sec1back .sec1 h1 {
+    font-size: 24px;
+  }
+}
 .sec1back .sec1 button {
   padding: 24px 50px;
   background-color: darkorchid;
@@ -114,8 +119,15 @@
     padding: 12px 25px;
   }
 }
-.sec1back .sec1 button:hover {
-  background-color: darkmagenta;
+@media (hover: hover) {
+  .sec1back .sec1 button:hover {
+    background-color: darkmagenta;
+  }
+}
+@media (hover: none) {
+  .sec1back .sec1 button:active {
+    background-color: darkmagenta;
+  }
 }
 .sec1back .sec1 .timer {
   margin-top: 30px;
@@ -153,6 +165,11 @@
   justify-content: center;
   gap: 20px;
   margin-top: 50px;
+}
+@media (max-width: 500px) {
+  .sec1back .sec1 .fix {
+    margin-top: 30px;
+  }
 }
 .sec1back .sec1 h2 {
   margin-top: 10px;
@@ -192,6 +209,11 @@
   justify-content: space-between;
   gap: 10px;
   align-items: center;
+}
+@media (max-width: 500px) {
+  .footerback .footer {
+    padding: 25px 0;
+  }
 }
 .footerback .footer .logo {
   display: flex;
