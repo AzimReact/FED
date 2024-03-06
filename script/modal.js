@@ -1,4 +1,4 @@
-//  логика модалка 
+//  логика модалки 
 
 const login = document.getElementById("login")
 login.onclick = openModal

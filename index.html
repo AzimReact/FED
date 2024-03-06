@@ -20,6 +20,22 @@
           <a href="./about.html">О нас</a>
         </nav>
         <button id="login">Войти</button>
+        <!-- --------mobile--------- -->
+        <div class="dropdown">
+          <img class="dropdown-icon" src="./assets/icons/dropdown-icon.png" alt="dropdown icon">
+          <div class="dropdown-content">
+            <div class="dropdown-header">
+              <img class="dropdown-header-logo" src="./assets/icons/time.png" alt="dropdown logo">
+              <img class="dropdown-header-closeBtn" src="./assets/icons/close-icon.png" alt="close-icon">
+            </div>
+            <nav class="dropdown-menu">
+              <a href="./index.html">Главная</a>
+              <a href="./myprogress.html">Мой прогресс</a>
+              <a href="./about.html">О нас</a>
+            </nav>
+            <button id="dropdown-loginBtn">Войти</button>
+          </div>
+        </div>
       </div>
     </div>
   </header>
@@ -46,7 +62,16 @@
   <footer class="footerback">
     <div class="container">
       <div class="footer">
-        <div class="logo"><img src="./assets/icons/time.png" alt="logo">FED</div>
+        <div class="logo">
+          <div class="logo-content">
+            <img src="./assets/icons/time.png" alt="logo">
+          </div>
+          <div class="mobile-contacts">
+            <a href="https://t.me/azimka0" target="_blank">
+              <img class="tg" src="./assets/icons/tg.webp" alt="telegram icon">
+            </a>
+          </div>
+        </div>
         <nav class="menu">
           <a href="./index.html">Главная</a>
           <a href="./myprogress.html">Мой прогресс</a>
@@ -73,6 +98,8 @@
 
   <script src="./script/main.js"></script>
   <script src="./script/modal.js"></script>
+  <script src="./script/dropdown.js"></script>
+
 </body>
 
 </html>

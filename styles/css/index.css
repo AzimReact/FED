@@ -1,36 +1,4 @@
-@charset "UTF-8";
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Montserrat", sans-serif;
-  font-size: 18px;
-  font-weight: 500;
-  color: rgb(20, 20, 20);
-}
-
-main {
-  padding-bottom: 147.5px; /* Устанавливаем отступ внизу, равный высоте footer */
-}
-
-button {
-  padding: 12px 25px;
-  cursor: pointer;
-  border: none;
-  border-radius: 2px;
-}
-
-.container {
-  width: 1240px;
-  margin: 0 auto;
-}
-
-.bodyback {
-  background-color: lightcyan;
-  min-height: 100vh;
-}
-
+@import url("../css/default.css");
 .headerback {
   background-color: lightcyan;
   box-shadow: inset 0 12px 12px -5px rgba(0, 0, 0, 0.5), inset 0 -12px 12px -5px rgba(0, 0, 0, 0.5);
@@ -66,12 +34,66 @@ button {
 .headerback .header .menu a:hover {
   text-decoration: underline;
 }
+@media (max-width: 500px) {
+  .headerback .header .menu {
+    display: none;
+  }
+}
 .headerback .header button {
   background-color: darkorchid;
   color: white;
 }
+@media (max-width: 500px) {
+  .headerback .header button {
+    display: none;
+  }
+}
 .headerback .header button:hover {
   background-color: darkmagenta;
+}
+.headerback .header .dropdown {
+  display: none;
+}
+@media (max-width: 500px) {
+  .headerback .header .dropdown {
+    display: block;
+    cursor: pointer;
+  }
+  .headerback .header .dropdown-icon {
+    width: 35px;
+  }
+  .headerback .header .dropdown-content {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 250px;
+    height: 100vh;
+    z-index: 1;
+    background-color: white;
+    padding: 20px;
+  }
+  .headerback .header .dropdown-content .dropdown-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .headerback .header .dropdown-content .dropdown-header-logo {
+    width: 50px;
+  }
+  .headerback .header .dropdown-content .dropdown-header-closeBtn {
+    width: 30px;
+  }
+  .headerback .header .dropdown-content .dropdown-menu {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .headerback .header .dropdown-content #dropdown-loginBtn {
+    display: block;
+    margin-top: 20px;
+  }
 }
 
 .sec1back .sec1 {
@@ -87,6 +109,11 @@ button {
   background-color: darkorchid;
   color: white;
 }
+@media (max-width: 500px) {
+  .sec1back .sec1 button {
+    padding: 12px 25px;
+  }
+}
 .sec1back .sec1 button:hover {
   background-color: darkmagenta;
 }
@@ -95,6 +122,11 @@ button {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+}
+@media (max-width: 500px) {
+  .sec1back .sec1 .timer {
+    flex-direction: column;
+  }
 }
 .sec1back .sec1 .timer .resultdiv {
   display: flex;
@@ -105,6 +137,12 @@ button {
 .sec1back .sec1 .timer .resultdiv #result {
   font-size: 100px;
   color: darkmagenta;
+}
+@media (max-width: 500px) {
+  .sec1back .sec1 .timer .resultdiv #result {
+    font-size: 50px;
+    margin: 20px 0;
+  }
 }
 .sec1back .sec1 .timer .resultdiv .minuts {
   font-size: 30px;
@@ -159,13 +197,38 @@ button {
   display: flex;
   align-items: center;
   gap: 10px;
+  cursor: pointer;
+}
+.footerback .footer .logo-content {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.footerback .footer .logo-content div {
   color: darkorchid;
   font-weight: 700;
   font-size: 35px;
-  cursor: pointer;
 }
 .footerback .footer .logo img {
   width: 50px;
+}
+@media (max-width: 500px) {
+  .footerback .footer .logo {
+    flex-direction: column;
+  }
+}
+.footerback .footer .logo .mobile-contacts {
+  display: none;
+}
+@media (max-width: 500px) {
+  .footerback .footer .logo .mobile-contacts {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  .footerback .footer .logo .mobile-contacts img {
+    width: 40px;
+  }
 }
 .footerback .footer .menu {
   display: flex;
@@ -191,34 +254,10 @@ button {
 .footerback .footer .contacts .tg {
   width: 35px;
 }
-
-#overlay {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5); /* Полупрозрачный черный фон */
-}
-
-#modal {
-  display: none;
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: white;
-  padding: 20px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-  flex-direction: column;
-  align-items: center;
-  gap: 20px;
-}
-
-.modalBtn {
-  background-color: darkorchid;
-  color: white;
+@media (max-width: 500px) {
+  .footerback .footer .contacts {
+    display: none;
+  }
 }
 
 /*# sourceMappingURL=index.css.map */
